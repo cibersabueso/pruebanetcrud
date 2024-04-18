@@ -13,7 +13,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Asegúrate de agregar los controladores si estás usando API Controllers
+
 builder.Services.AddControllers();
 
 var app = builder.Build();
@@ -22,11 +22,11 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
-    // El valor predeterminado de HSTS es de 30 días. Puedes cambiar esto para escenarios de producción, ver https://aka.ms/aspnetcore-hsts.
+    
     app.UseHsts();
 }
 
-// app.UseHttpsRedirection(); // Descomenta si decides usar redirección HTTPS.
+
 app.UseStaticFiles();
 
 app.UseRouting();
