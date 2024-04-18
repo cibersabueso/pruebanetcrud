@@ -23,9 +23,9 @@ namespace InmueblesApi
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddControllers(); // Añade soporte para controladores si estás construyendo una API REST.
+            services.AddControllers(); 
 
-            // Aquí puedes añadir otros servicios que tu aplicación necesite.
+           
         }
 
         // Este método se usa para configurar el HTTP request pipeline.
